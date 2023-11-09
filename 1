@@ -1,0 +1,26 @@
+#include <vector>
+#include <iostream>
+#include <algorithm>
+using namespace std;
+struct Participant
+{
+    int id;
+    int score;
+};
+
+int main()
+{
+    setlocale(LC_ALL, "");
+    int numParticipants;
+    cout << "Введите количество участников: ";
+    cin >> numParticipants;
+
+    vector<Participant> participants(numParticipants);
+
+    for (int i = 0; i < numParticipants; ++i) {
+        cout << "Введите идентификационный номер участника " << i + 1 << ": ";
+        cin >> participants[i].id;
+
+        cout << "Введите количество набранных баллов: ";
+        cin >> participants[i].score;
+    }
